@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import lotto.exception.EmptyInputException;
 import lotto.exception.InvalidNumberException;
 
 @SuppressWarnings("NonAsciiCharacters")
@@ -43,7 +44,7 @@ public class NumberTest {
 	void 공백_테스트(String value) {
 		assertThatThrownBy(() -> {
 			Number.of(value);
-		}).isInstanceOf(InvalidNumberException.class)
+		}).isInstanceOf(EmptyInputException.class)
 			.hasMessageMatching("공백은 사용할 수 없습니다.");
 	}
 
@@ -51,7 +52,7 @@ public class NumberTest {
 	void NULL_테스트() {
 		assertThatThrownBy(() -> {
 			Number.of(null);
-		}).isInstanceOf(InvalidNumberException.class)
+		}).isInstanceOf(NullPointerException.class)
 			.hasMessageMatching("널은 입력되지 않습니다.");
 	}
 

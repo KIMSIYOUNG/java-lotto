@@ -28,7 +28,7 @@ public class StringUtil {
 	public static void checkNull(Object o) {
 		if(Objects.isNull(o)) {
 			throw new NullPointerException("널은 입력되지 않습니다.");
-	}
+		}
 	}
 
 	public static void checkNumberFormat(String value) {
