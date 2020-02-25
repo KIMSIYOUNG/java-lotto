@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
+import lotto.exception.EmptyInputException;
+
 public class StringUtil {
 	public static final String BLANK = " ";
 	public static final String NO_BLANK = "";

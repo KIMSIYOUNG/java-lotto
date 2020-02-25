@@ -8,8 +8,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import lotto.domain.Number;
-import lotto.exception.InvalidNumberException;
+import lotto.exception.EmptyInputException;
 
 @SuppressWarnings("NonAsciiCharacters")
 public class StringUtilTest {
