@@ -8,15 +8,15 @@ import lotto.domain.Lottos;
 import lotto.domain.Number;
 import lotto.domain.PurchaseMoney;
 import lotto.domain.WinningLotto;
-import lotto.domain.model.LottoCount;
-import lotto.domain.model.LottoGame;
+import lotto.domain.LottoCount;
+import lotto.domain.result.GameResult;
 import lotto.view.InputView;
 import lotto.view.OutputView;
 
 public class LottoController {
 	public void run() {
 		PurchaseMoney money = new PurchaseMoney(InputView.getMoney());
-		LottoCount count = new LottoCount(InputView.getManualCount(),money.parseToPiece());
+		LottoCount count = new LottoCount(InputView.getManualCount(), money.parseToPiece());
 		List<String> manualLottoInput = InputView.getManualLottos(count.getManualLotto());
 		Lottos lottos = LottoFactory.create(manualLottoInput, count.getAutoLotto());
 

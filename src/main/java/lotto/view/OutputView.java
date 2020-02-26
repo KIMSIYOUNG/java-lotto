@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import lotto.domain.Lotto;
 import lotto.domain.Lottos;
-import lotto.domain.model.LottoCount;
+import lotto.domain.LottoCount;
 import lotto.domain.result.GameResult;
 import lotto.domain.result.RankCount;
 import lotto.domain.result.Statistic;

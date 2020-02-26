@@ -32,17 +32,10 @@ class GameResultTest {
 	}
 
 	@Test
-	void getEarningMoney() {
-		GameResult gameResult = new GameResult();
-		gameResult.of(Statistic.FIVE).plusCount();
-
+	@DisplayName("정상적인 수익률을 반환하는지")
+	void getProfitTest() {
 		assertThat(
-			gameResult.getEarningMoney(new PurchaseMoney("1000"))
-		).isEqualTo((Statistic.FIVE.getPrize() / 1000) * 100);
-	}
-
-	@Test
-	void getResult() {
-		assertThat(new GameResult().getResult().size() == 5);
+			new GameResult(winningLotto,lottos).getEarningMoney(money)
+		).isEqualTo((3000000 / money.getPurchaseMoney()) * 100);
 	}
 }

@@ -14,7 +14,7 @@ public class GameResult {
 	private Map<Statistic, RankCount> result = new LinkedHashMap<>();
 
 	public GameResult(WinningLotto winningLotto, Lottos lottos) {
-		for (Statistic statistic : Statistic.values()) {
+		for(Statistic statistic : Statistic.values()) {
 			result.put(statistic, new RankCount(statistic));
 		}
 		for (Lotto lotto : lottos) {
